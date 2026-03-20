@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-text-main);
+  line-height: 1.65;
+  background:
+    radial-gradient(circle at 12% 2%, rgba(216, 179, 154, 0.28), transparent 34%),
+    radial-gradient(circle at 88% 10%, rgba(199, 121, 96, 0.18), transparent 36%),
+    linear-gradient(180deg, #fbf6f0, var(--color-bg));
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 var(--space-3);
+  font-family: var(--font-serif);
+  line-height: 1.1;
+  letter-spacing: 0.015em;
+  color: var(--color-heading);
+}
+
+h1 { font-size: clamp(2rem, 4.6vw, 3.6rem); }
+h2 { font-size: clamp(1.6rem, 3.4vw, 2.55rem); }
+h3 { font-size: clamp(1.2rem, 2.5vw, 1.75rem); }
+
+p,
+li,
+label,
+input,
+button,
+textarea,
+select {
+  font-size: clamp(0.96rem, 1.2vw, 1.02rem);
+}
+
+p {
+  color: var(--color-text-main);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--ease-soft);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(calc(100% - 2.6rem), var(--max));
+  margin: 0 auto;
+}
+
+.section {
+  padding: var(--space-8) 0;
+}
+
+.warm {
+  background: var(--gradient-soft);
+}
+
+.section h2 {
+  margin-bottom: 1.3rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+  flex-wrap: wrap;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  color: var(--color-text-main);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: color-mix(in srgb, var(--color-text-light) 78%, white);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary-dark);
+  outline-offset: 3px;
+}
