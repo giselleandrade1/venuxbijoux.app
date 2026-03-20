@@ -1,0 +1,136 @@
+#cart-list {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+}
+
+.order-table {
+  display: grid;
+  grid-template-columns: 1fr 110px auto;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.95rem;
+  border-radius: 14px;
+  border: 1px solid var(--color-border);
+  background: linear-gradient(170deg, #fffdfb, #efddcd);
+  box-shadow: var(--shadow-soft);
+}
+
+.variation-badge {
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  color: var(--color-text-light);
+  background: #ead3c1;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  display: inline-block;
+  padding: 0.24rem 0.66rem;
+}
+
+#checkout-summary ul {
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.1rem;
+}
+
+#checkout-summary li {
+  margin-bottom: 0.4rem;
+}
+
+#checkout-summary small {
+  display: block;
+  color: var(--color-text-light);
+}
+
+.orders-subtitle {
+  margin-bottom: 1rem;
+  color: var(--color-text-light);
+}
+
+.cart-empty-item {
+  text-align: center;
+  padding: 2.2rem;
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.cart-empty-hint {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.totals-row-strong {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+}
+
+#cart-totals,
+#checkout-summary {
+  align-self: start;
+  position: sticky;
+  top: 110px;
+  background: linear-gradient(170deg, #fffefc, #ecd8c6);
+  border: 1px solid var(--color-border);
+}
+
+.shipping-form {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.cart-cta-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.cart-cta-primary {
+  margin-top: 1.5rem;
+}
+
+.cart-cta-secondary {
+  margin-top: 0.5rem;
+}
+
+.order-card {
+  margin-bottom: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: #fffaf4;
+  padding: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.order-card-header {
+  margin-bottom: 0.8rem;
+}
+
+.order-items-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.order-item-row {
+  margin-bottom: 0.7rem;
+}
+
+#checkout-form {
+  background: linear-gradient(170deg, #fffefc, #ead5c3);
+}
+
+#checkout-form h1 {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  #cart-totals,
+  #checkout-summary {
+    position: static;
+  }
+}
