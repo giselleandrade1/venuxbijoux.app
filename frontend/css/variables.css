@@ -1,0 +1,70 @@
+:root {
+  --color-primary: #B46A55;
+  --color-primary-dark: #A45D44;
+  --color-secondary: #D29B6C;
+  --color-accent: #C77960;
+  --color-soft: #D8B39A;
+  --color-neutral: #A98C7A;
+  --color-bg: #F7F1E8;
+  --color-surface: #EBD9C4;
+  --color-white: #FFFFFF;
+
+  --color-text-main: #3F2B22;
+  --color-text-soft: #7E6253;
+  --color-text-light: #7E6253;
+  --color-heading: #6B3F2C;
+
+  --color-border: #E3D2C4;
+  --color-border-strong: #d5beab;
+  --color-hover: #A45D44;
+  --color-surface-alt: #f1e4d6;
+
+  --gradient-primary: linear-gradient(135deg, #C77960 0%, #B46A55 45%, #A45D44 100%);
+  --gradient-soft: linear-gradient(135deg, #F7F1E8 0%, #EBD9C4 100%);
+  --gradient-earth: linear-gradient(135deg, #D8B39A 0%, #D29B6C 50%, #B46A55 100%);
+  --gradient-warm: linear-gradient(135deg, #EBD9C4 0%, #D8B39A 55%, #C77960 100%);
+
+  --shadow-soft: 0 8px 30px rgba(100, 58, 41, 0.08);
+  --shadow-medium: 0 12px 40px rgba(100, 58, 41, 0.12);
+  --shadow-card: 0 18px 45px rgba(100, 58, 41, 0.11);
+  --shadow-lift: 0 22px 52px rgba(100, 58, 41, 0.16);
+
+  --radius-xs: 8px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-soft: 12px;
+  --radius-full: 999px;
+  --radius-pill: 999px;
+
+  --cream: var(--color-bg);
+  --ivory: var(--color-white);
+  --pearl: #EBD9C4;
+  --nude: var(--color-soft);
+  --latte: var(--color-surface);
+  --caramel: var(--color-primary);
+  --coffee: var(--color-primary);
+  --choco: #8A5A44;
+  --espresso: var(--color-text-main);
+  --gold: #D29B6C;
+  --accent: var(--color-neutral);
+  --ok: #5f8f6e;
+  --danger: #8c554b;
+
+  --font-sans: "Manrope", "Poppins", "Segoe UI", sans-serif;
+  --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+
+  --space-1: 0.35rem;
+  --space-2: 0.55rem;
+  --space-3: 0.9rem;
+  --space-4: 1.2rem;
+  --space-5: 1.7rem;
+  --space-6: 2.3rem;
+  --space-7: 3.1rem;
+  --space-8: 4.2rem;
+
+  --ease-soft: 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-pop: 320ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  --max: 1280px;
+}
