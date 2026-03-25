@@ -1,14 +1,26 @@
 {
-  "name": "venux-bijoux-root",
+  "name": "venux-bijoux",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "node tests/smoke/run-smoke.mjs",
+    "test:smoke": "node tests/smoke/run-smoke.mjs"
+  },
+  "dependencies": {
+    "next": "^16.2.1",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
   "devDependencies": {
-    "@testing-library/jest-dom": "^6.9.1",
-    "@types/jest": "^30.0.0",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "@types/styled-components": "^5.1.26",
-    "styled-components": "^5.3.10",
-    "typescript": "^5.5.0"
+    "@types/node": "25.5.0",
+    "@types/react": "19.2.14",
+    "eslint": "^9.22.0",
+    "eslint-config-next": "^16.2.1",
+    "typescript": "6.0.2"
   }
 }
