@@ -79,6 +79,17 @@ export default function Header() {
         { value: 'system', label: 'Tema do sistema', Icon: SystemIcon },
     ];
 
+    const currentThemeOption = themeOptions.find((option) => option.value === themePreference) ?? themeOptions[2];
+    const nextThemeMap = {
+        light: 'dark',
+        dark: 'system',
+        system: 'light',
+    };
+
+    const handleThemeCycle = () => {
+        setTheme(nextThemeMap[themePreference] ?? 'light');
+    };
+
     return (
         <header className="site-header">
             <div className="topbar">Colecao 2026 com ate 25% OFF em pecas selecionadas</div>
@@ -109,22 +120,15 @@ export default function Header() {
 
                 <div className="header-actions">
                     <div className="theme-switcher" role="group" aria-label="Alternar tema">
-                        {themeOptions.map((option) => {
-                            const isActive = themePreference === option.value;
-                            return (
-                                <button
-                                    key={option.value}
-                                    type="button"
-                                    className={`theme-btn${isActive ? ' is-active' : ''}`}
-                                    data-theme-value={option.value}
-                                    aria-label={option.label}
-                                    aria-pressed={isActive}
-                                    onClick={() => setTheme(option.value)}
-                                >
-                                    <option.Icon />
-                                </button>
-                            );
-                        })}
+                        <button
+                            type="button"
+                            className="theme-btn is-active"
+                            aria-label={`${currentThemeOption.label}. Clique para alternar tema`}
+                            title={`${currentThemeOption.label}. Clique para alternar tema`}
+                            onClick={handleThemeCycle}
+                        >
+                            <currentThemeOption.Icon />
+                        </button>
                     </div>
                     <Link href="/wishlist" className="header-icon-btn" aria-label="Favoritos">
                         <span className="action-glyph" aria-hidden="true">
