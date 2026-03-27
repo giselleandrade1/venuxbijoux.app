@@ -1,44 +1,51 @@
 :root {
-  --bg: #fffbdc;
-  --bg-soft: #fff3e0;
-  --surface: #ffd3a5;
-  --surface-2: #ffaa6e;
-  --card: #ffe0b2;
-  --card-2: #f7c7a1;
+  --bg: #fff8f2;
+  --bg-soft: #fff3e8;
+  --bg-muted: #ffe9d6;
 
-  --primary: #ff8237;
+  --surface: #ffd8b5;
+  --surface-soft: #f7c7a1;
+  --surface-2: var(--surface-soft);
+  --card: #ffe6cc;
+  --card-2: var(--surface-soft);
+
+  --primary: #e5681c;
   --primary-hover: #f08a3c;
-  --primary-strong: #ff5900;
+  --primary-soft: #f4a86a;
+  --primary-strong: #c44f10;
 
   --accent: #ffa726;
-  --accent-2: #ff9800;
+  --accent-soft: #ffd3a5;
+  --accent-2: var(--accent-soft);
 
-  --text: #5a2e12;
-  --text-soft: #7a4b2a;
-  --text-muted: #9b6c47;
+  --text: #4a2c1a;
+  --text-soft: #7a4a2a;
+  --text-muted: #a0714e;
 
-  --border: rgba(255, 130, 55, 0.18);
-  --shadow: rgba(230, 81, 0, 0.1);
-  --overlay: rgba(255, 224, 178, 0.5);
-  --overlay-strong: rgba(255, 211, 165, 0.72);
-  --count-ring: rgba(255, 243, 224, 0.86);
+  --border: rgba(229, 104, 28, 0.18);
+  --shadow: rgba(229, 104, 28, 0.12);
+  --overlay: rgba(255, 216, 181, 0.5);
+  --overlay-strong: rgba(255, 211, 165, 0.7);
+  --count-ring: rgba(255, 248, 242, 0.88);
 
   --success: #7b9860;
   --warning: #e6a23c;
   --danger: #d96b4f;
 
+  --gradient-primary: linear-gradient(135deg, #e5681c, #f08a3c);
+  --gradient-soft: linear-gradient(135deg, #ffe9d6, #ffd3a5);
+  --gradient-dark: linear-gradient(135deg, #3a2116, #5a3322);
+
   --background: var(--bg);
   --surface-light: var(--bg-soft);
-  --primary-soft: var(--surface-2);
-  --secondary: var(--primary-strong);
+  --secondary: var(--primary);
   --secondary-hover: var(--primary);
-  --accent-soft: var(--card-2);
   --leaf: var(--success);
   --leaf-soft: color-mix(in srgb, var(--success) 76%, var(--bg));
   --text-light: var(--text-muted);
   --muted: var(--text-soft);
   --primary-dark: var(--text);
-  --shadow-lg: 0 18px 40px var(--shadow);
+  --shadow-lg: 0 12px 32px var(--shadow);
   --radius: 20px;
   --max: 1240px;
 }
@@ -46,17 +53,22 @@
 [data-theme="dark"] {
   --bg: #1f120c;
   --bg-soft: #2a1810;
+  --bg-muted: #332016;
+
   --surface: #3a2116;
-  --surface-2: #503636;
-  --card: #4a2a1c;
-  --card-2: #684500;
+  --surface-soft: #4a2a1c;
+  --surface-2: var(--surface-soft);
+  --card: #5a3322;
+  --card-2: var(--surface-soft);
 
   --primary: #ff8237;
   --primary-hover: #ffa726;
-  --primary-strong: #ff5900;
+  --primary-soft: #f4a86a;
+  --primary-strong: #ff8237;
 
   --accent: #ffd3a5;
-  --accent-2: #f7c7a1;
+  --accent-soft: #ffe6cc;
+  --accent-2: var(--accent-soft);
 
   --text: #fff4e8;
   --text-soft: #f5d7bf;
@@ -64,13 +76,17 @@
 
   --border: rgba(255, 211, 165, 0.14);
   --shadow: rgba(0, 0, 0, 0.35);
-  --overlay: rgba(255, 211, 165, 0.2);
-  --overlay-strong: rgba(255, 211, 165, 0.34);
+  --overlay: rgba(255, 211, 165, 0.22);
+  --overlay-strong: rgba(255, 230, 204, 0.34);
   --count-ring: rgba(31, 18, 12, 0.78);
 
   --success: #9fbc84;
   --warning: #f0b04c;
   --danger: #f08f73;
+
+  --gradient-primary: linear-gradient(135deg, #ff8237, #ffa726);
+  --gradient-soft: linear-gradient(135deg, #3a2116, #4a2a1c);
+  --gradient-dark: linear-gradient(135deg, #3a2116, #5a3322);
 
   --leaf-soft: color-mix(in srgb, var(--success) 72%, var(--bg));
 }
@@ -147,7 +163,7 @@ a {
   text-transform: uppercase;
   padding: 0.6rem;
   color: var(--bg-soft);
-  background: linear-gradient(90deg, var(--primary-strong), var(--primary), var(--primary-strong));
+  background: var(--gradient-primary);
 }
 
 .site-header {
@@ -353,14 +369,14 @@ a {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary-soft) 0%, var(--primary) 42%, var(--primary-hover) 100%);
+  background: var(--gradient-primary);
   color: var(--bg-soft);
   box-shadow: 0 10px 22px color-mix(in srgb, var(--primary-strong) 26%, transparent);
 }
 
 .btn-outline {
   border-color: var(--border);
-  background: linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%);
+  background: var(--gradient-soft);
   color: var(--primary-dark);
 }
 
@@ -380,7 +396,7 @@ a {
 .hero-card {
   border: 1px solid var(--border);
   border-radius: 30px;
-  background: linear-gradient(160deg, color-mix(in srgb, var(--surface-2) 92%, var(--bg-soft) 8%), color-mix(in srgb, var(--surface) 82%, var(--bg-soft) 18%));
+  background: linear-gradient(160deg, color-mix(in srgb, var(--surface-soft) 90%, var(--bg-soft) 10%), color-mix(in srgb, var(--card) 82%, var(--bg-soft) 18%));
   box-shadow: var(--shadow-lg);
   display: grid;
   grid-template-columns: 1fr minmax(300px, 0.9fr);
@@ -453,7 +469,7 @@ a {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
-  background: linear-gradient(180deg, var(--surface-2), var(--surface));
+  background: linear-gradient(180deg, var(--card), var(--surface));
   box-shadow: 0 8px 24px var(--shadow);
 }
 
@@ -476,7 +492,7 @@ a {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
-  background: linear-gradient(170deg, var(--surface-2), var(--surface));
+  background: linear-gradient(170deg, var(--card), var(--surface));
   box-shadow: 0 8px 24px var(--shadow);
   padding: 0.75rem;
   display: grid;
@@ -794,7 +810,7 @@ textarea {
 .site-footer {
   margin-top: 2rem;
   border-top: 1px solid color-mix(in srgb, var(--text) 20%, transparent);
-  background: linear-gradient(180deg, var(--surface), color-mix(in srgb, var(--surface) 82%, var(--accent-soft) 18%));
+  background: linear-gradient(180deg, var(--bg-soft), var(--surface));
   color: var(--text-soft);
   padding-top: 2.6rem;
 }
